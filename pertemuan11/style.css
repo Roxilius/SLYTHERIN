@@ -1,0 +1,7 @@
+figure{
+    width: min-content;
+    box-shadow: 5px 5px 10px black;;
+    margin: 10px auto;
+    border-radius: 15px;
+    padding: 5px;
+}
