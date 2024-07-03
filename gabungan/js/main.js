@@ -12,7 +12,7 @@ document.write(
 document.write("Ulang ".repeat(5));
 
 // counted loop menggunakan forEach
-const days = ["senin", "selasa", "rabu", "kamis", `jum'at`, 'sabtu', "minggu"];
+const days = ["senin", "selasa", "rabu", "kamis", `jum'at`, "sabtu", "minggu"];
 days.forEach((i) => {
   console.log(`${i}`);
 });
@@ -70,20 +70,22 @@ let alamat = {
 let person1 = createObject("Fajri", 20, alamat, hobi);
 // menampilkan value dari setiap properti object person1 menggunakan document.write dengan tamplate literal
 document.write(`
-    <h1>Person 1</h1>
-    <h1>Nama: ${person1.name}</h1>
-    <h1>Umur: ${person1.umur}</h1>
-    <h1>Provinsi: ${person1.alamat.provinsi}</h1>
-    <h1>Kota: ${person1.alamat.kota}</h1>
-    <h1>Hobi : ${person1.hobi}</h1>
-    <hr>
+  <h1>Person 1</h1>
+  <h1>Nama: ${person1.name}</h1>
+  <h1>Umur: ${person1.umur}</h1>
+  <h1>Provinsi: ${person1.alamat.provinsi}</h1>
+  <h1>Kota: ${person1.alamat.kota}</h1>
+  <h1>Hobi : ${person1.hobi}</h1>
+  <hr>
 `);
 
 /* 
   membuat object person2 menggunakan Function Declaration 
   (dengan parameter alamat(bentuk object) dan hobi(bentuk array) yang langsung di isi sebagai parameter)
 */
-let person2 = createObject( "Fajri", 20,
+let person2 = createObject(
+  "Fajri",
+  20,
   {
     provinsi: "Sumatra Barat",
     kota: "Padang",
@@ -92,11 +94,11 @@ let person2 = createObject( "Fajri", 20,
 );
 // menampilkan value dari setiap properti object person2 menggunakan document.write dengan tamplate literal
 document.write(`
-    <h1>Person 2</h1>
-    <h1>Nama: ${person2.name}</h1>
-    <h1>Umur: ${person2.umur}</h1>
-    <h1>Provinsi: ${person2.alamat.provinsi}</h1>
-    <h1>Kota: ${person2.alamat.kota}</h1>
-    <h1>Hobi : ${person2.hobi}</h1>
-    <hr>
+  <h1>Person 2</h1>
+  <h1>Nama: ${person2.name}</h1>
+  <h1>Umur: ${person2.umur}</h1>
+  <h1>Provinsi: ${person2.alamat.provinsi}</h1>
+  <h1>Kota: ${person2.alamat.kota}</h1>
+  <h1>Hobi : ${person2.hobi}</h1>
+  <hr>
 `);
