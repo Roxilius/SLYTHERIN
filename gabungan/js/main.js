@@ -12,7 +12,7 @@ document.write(
 document.write("Ulang ".repeat(5));
 
 // counted loop menggunakan forEach
-const days = ["senin", "selasa", "rabu", "kamis", `jum'at`, `sabtu`, "minggu"];
+const days = ["senin", "selasa", "rabu", "kamis", `jum'at`, 'sabtu', "minggu"];
 days.forEach((i) => {
   console.log(`${i}`);
 });
@@ -25,7 +25,7 @@ let mahasiswa = {
   fakultas: "ilkom",
 };
 // menambahkan properti baru ke dalam object
-mahasiswa.univ = "pasim";
+mahasiswa.univ = "Pasim";
 // menghapus properti di object
 delete mahasiswa.univ;
 
@@ -39,7 +39,7 @@ function createObject(name, nim, prodi, fakultas) {
   return mahasiswa;
 }
 // membuat object menggunakan Function Declaration
-let mhs1 = createObject("dedy", "021654651", "asdasd", "asdasd");
+let mhs1 = createObject("dedy", "021654651", "S1 teknik Industri", "Teknik");
 
 // cara menambahkan object ke dalam array
 let car = ["Ferrari", "D 1703 ADX"];
@@ -68,24 +68,20 @@ let alamat = {
 };
 // membuat object person1 menggunakan Function Declaration (dengan parameter alamat dan hobi yg sudah di deklar ke sebuah variabel)
 let person1 = createObject("Fajri", 20, alamat, hobi);
-// menampilkan value dari setiap properti object person1
+// menampilkan value dari setiap properti object person1 menggunakan document.write dengan tamplate literal
 document.write(`
     <h1>Person 1</h1>
     <h1>Nama: ${person1.name}</h1>
     <h1>Umur: ${person1.umur}</h1>
-    <div>
-        <h1>Provinsi: ${person1.alamat.provinsi}</h1>
-        <h1>Kota: ${person1.alamat.kota}</h1>
-    </div>
-    <div>
-        <h1>Hobi : ${person1.hobi}</h1>
-    </div>
+    <h1>Provinsi: ${person1.alamat.provinsi}</h1>
+    <h1>Kota: ${person1.alamat.kota}</h1>
+    <h1>Hobi : ${person1.hobi}</h1>
     <hr>
 `);
 
 /* 
-    membuat object person2 menggunakan Function Declaration 
-    (dengan parameter alamat(bentuk object) dan hobi(bentuk array) yang langsung di isi sebagai parameter)
+  membuat object person2 menggunakan Function Declaration 
+  (dengan parameter alamat(bentuk object) dan hobi(bentuk array) yang langsung di isi sebagai parameter)
 */
 let person2 = createObject( "Fajri", 20,
   {
@@ -94,17 +90,13 @@ let person2 = createObject( "Fajri", 20,
   },
   ["Main Game", "Coding"]
 );
-// menampilkan value dari setiap properti object person2
+// menampilkan value dari setiap properti object person2 menggunakan document.write dengan tamplate literal
 document.write(`
     <h1>Person 2</h1>
     <h1>Nama: ${person2.name}</h1>
     <h1>Umur: ${person2.umur}</h1>
-    <div>
-        <h1>Provinsi: ${person2.alamat.provinsi}</h1>
-        <h1>Kota: ${person2.alamat.kota}</h1>
-    </div>
-    <div>
-        <h1>Hobi : ${person2.hobi}</h1>
-    </div>
+    <h1>Provinsi: ${person2.alamat.provinsi}</h1>
+    <h1>Kota: ${person2.alamat.kota}</h1>
+    <h1>Hobi : ${person2.hobi}</h1>
     <hr>
 `);
