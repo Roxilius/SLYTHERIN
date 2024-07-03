@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <div id="myDiv" class="myDiv"></div>
+    <p class="pr">1</p>
+    <p class="pr">2</p>
+    <p class="pr">3</p> -->
+
+    <div id="container">
+      <h1 ondblclick="alert('dbl')">asd</h1>
+    </div>
+    <!-- <h1 id="keydown"></h1>
+    <h1 id="pressed"></h1>
+    <h1 id="keyup"></h1> -->
+    <input type="color" />
+
+    <form onsubmit="return validate()">
+      <label for="username">
+        Username
+        <input type="text" name="username" />
+      </label>
+      <label for="password">
+        Password
+        <input type="password" name="password" />
+      </label>
+      <input type="submit" value="Submit" />
+    </form>
+    <script>
+      // get elements by class
+      // let clas = document.getElementsByClassName('pr');
+      // clas[0].textContent = 'ikmal'
+      // clas[2].textContent = 'iqbal'
+      // get by id
+      // let id = document.getElementById('myDiv');
+      // id.innerText = "ikmal"
+      // id.innerHTML = `
+      // <h1>ikmal</h1>
+      // `
+      // get elements by tag
+      // let p = document.getElementsByTagName('p');
+      // p[2].textContent = "b"
+      // query selector
+      // let pp = document.querySelector('.pr');
+      // pp.textContent = 'asd'
+      // selector all
+      // let all = document.querySelectorAll('.pr');
+      // all[0].textContent = 'zx'
+
+      // membuat element
+      // let newPragraf = document.createElement('p');
+      // newPragraf.textContent = "paragraf 1";
+      // let container = document.getElementById('container');
+      // container.appendChild(newPragraf);
+      // newPragraf.remove();
+      // newPragraf.style.color = 'red';
+      // newPragraf.classList.add('p1');
+      // newPragraf.classList.add('p2');
+      // newPragraf.className = "p1 p2"
+      // newPragraf.setAttribute('style', 'color: blue');
+
+      // newPragraf.addEventListener("click", () => alert('di klick'));
+      //   key press, up, down
+      //   const keydown = document.getElementById("keydown");
+      //   const pressed = document.getElementById("pressed");
+      //   const keyup = document.getElementById("keyup");
+      //   document.addEventListener("keydown", function (event) {
+      //     keydown.innerText = `menekan: ${event.key}`;
+      //   });
+      //   document.addEventListener("keypress", function (event) {
+      //     pressed.innerText = `menahan: ${event.key}`;
+      //   });
+      //   document.addEventListener("keyup", function (event) {
+      //     keyup.innerText = `melepas: ${event.key}`;
+      //   });
+      // on change
+      let input = document.querySelector("input");
+      input.addEventListener("change", (e) => {
+        document.querySelector("body").style.backgroundColor = e.target.value;
+      });
+
+      function validate(event) {
+        event.preventDefault();
+        let username = document.getElementsByName("username")[0].value;
+        let password = document.getElementsByName("password")[0].value;
+        // Mencegah pengiriman formulir jika ada masukan yang kosong.
+        if (username === "" || password === "") {
+          alert("Isi semua kolom sebelum mengirimkan formulir");
+          return false;
+        }
+        return true;
+      }
+    </script>
+  </body>
+</html>
