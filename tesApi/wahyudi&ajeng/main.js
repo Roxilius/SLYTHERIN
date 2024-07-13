@@ -48,3 +48,35 @@ function getAlbumTracks() {
     });
 }
 getAlbumTracks();
+
+// bentuk array
+// const data = [
+//   [
+//     {
+//       id: 1,
+//       nama: 'asd'
+//     }
+//   ],
+//   [],
+//   []
+// ]
+// data.forEach((d)=>{
+//   d.forEach((i)=>{
+//     console.log(i.nama);
+//   })
+// })
+
+// bentuk objek
+const data = {
+  album: [
+    {
+      id: 1,
+      nama: 'asd'
+    }
+  ],
+  playlist: [],
+  artis: []
+}
+data.album.forEach((album)=>{
+  console.log(nama);
+})
