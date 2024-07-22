@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tes Logika dengan JS dan HTML</title>
+<script>
+// Fungsi untuk memeriksa jawaban
+function checkAnswer() {
+    var question1 = document.quiz.question1.value;
+    var question2 = document.quiz.question2.value;
+    var question3 = document.quiz.question3.value;
+    var correctAnswers = 0;
+
+    if (question1 == "B") {
+        correctAnswers++;
+    }
+    if (question2 == "C") {
+        correctAnswers++;
+    }
+    if (question3 == "A") {
+        correctAnswers++;
+    }
+
+    // Tampilkan hasil
+    var result = "Anda mendapatkan " + correctAnswers + " jawaban benar.";
+    alert(result);
+}
+</script>
+</head>
+<body>
+
+<h2>Tes Logika</h2>
+
+<form name="quiz">
+  <h3>1. Jika hari ini adalah Senin, tiga hari lagi adalah?</h3>
+  <input type="radio" name="question1" value="A"> Senin<br>
+  <input type="radio" name="question1" value="B"> Kamis<br>
+  <input type="radio" name="question1" value="C"> Selasa<br><br>
+
+  <h3>2. Sebuah balon ada di udara, jika balon tersebut naik 10 meter, lalu turun 5 meter, lalu naik lagi 2 meter, berapa meter ketinggian balon dari permukaan awal?</h3>
+  <input type="radio" name="question2" value="A"> 17 meter<br>
+  <input type="radio" name="question2" value="B"> 7 meter<br>
+  <input type="radio" name="question2" value="C"> 3 meter<br><br>
+
+  <h3>3. Seseorang membeli 3 buah apel dengan harga $2 masing-masing, lalu menjual semua apel dengan harga $3 masing-masing. Berapa keuntungan yang diperoleh?</h3>
+  <input type="radio" name="question3" value="A"> $3<br>
+  <input type="radio" name="question3" value="B"> $6<br>
+  <input type="radio" name="question3" value="C"> $9<br><br>
+
+  <input type="button" value="Kirim Jawaban" onclick="checkAnswer()">
+</form>
+
+</body>
+</html>
